@@ -1,5 +1,6 @@
 import { useState } from "react";
 import StarRating from "./StarRating";
+import TestMovieRating from "./StarRating";
 
 const tempMovieData = [
   {
@@ -68,7 +69,19 @@ export default function App() {
         <Box>
           <WatchedSummary watched={watched} />
           <WatchedMovieList watched={watched} />
-          <StarRating maxRating={5} />
+          <StarRating
+            maxRating={6}
+            messages={[
+              "Bad",
+              "OK-ish",
+              "Good",
+              "Very Good",
+              "Amazing",
+              "Wowzer!",
+            ]}
+          />
+
+          <TestMovieRating maxRating={5} />
         </Box>
       </Main>
     </>
